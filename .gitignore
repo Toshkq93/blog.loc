@@ -1,8 +1,0 @@
-app
-config
-core
-public
-tmp
-vendor
-.htaccess
-composer.json
