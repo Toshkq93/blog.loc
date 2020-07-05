@@ -1,0 +1,14 @@
+{
+  "autoload": {
+    "psr-4": {
+      "core\\": "core",
+      "app\\": "app",
+      "config\\": "config"
+    }
+  },
+  "require": {
+    "gabordemooij/redbean": "dev-master",
+    "izniburak/router": "^1.5",
+    "vlucas/valitron": "^1.4"
+  }
+}
