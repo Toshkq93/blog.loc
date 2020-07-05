@@ -17,6 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--end slider -->
     <!--script-->
+    <script src="/js/typeahead.bundle.js"></script>
     <script type="text/javascript" src="/js/move-top.js"></script>
     <script type="text/javascript" src="/js/easing.js"></script>
     <script src="/megamenu-js-master/js/megamenu.js"></script>
@@ -41,9 +42,13 @@
         <!---start-top-nav---->
         <div class="top-menu">
             <nav class="navbar navbar-light bg-light">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+                <form class="form-inline search">
+                    <form action="search" method="get" autocomplete="off">
+                        <input type="text" class="typeahead" id="typeahead" name="s">
+                        <input type="submit" value="">
+                    </form>
+                    <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>-->
                 </form>
                 <div class="btn-group">
                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
