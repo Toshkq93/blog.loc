@@ -22,6 +22,7 @@
     <script type="text/javascript" src="/js/easing.js"></script>
     <script src="/megamenu-js-master/js/megamenu.js"></script>
     <script src="/js/validator.js"></script>
+    <script src="/js/my.js"></script>
     <!--/script-->
     <script type="text/javascript">
         jQuery(document).ready(function($) {
@@ -43,12 +44,10 @@
         <div class="top-menu">
             <nav class="navbar navbar-light bg-light">
                 <form class="form-inline search">
-                    <form action="search" method="get" autocomplete="off">
-                        <input type="text" class="typeahead" id="typeahead" name="s">
-                        <input type="submit" value="">
+                    <form action="<?= PATH;?>/search" method="post">
+                        <input type="search" placeholder="Поиск" class="form-control mr-sm-2" style="width: 140px;">
+                        <button><img src="/images/search.png" alt=""></button>
                     </form>
-                    <!--<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>-->
                 </form>
                 <div class="btn-group">
                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,6 +60,7 @@
                         <?php else: ?>
                             <a class="dropdown-item" href="<?= PATH?>/user/login">Вход</a>
                             <a class="dropdown-item" href="<?= PATH?>/user/signup">Регистрация</a>
+                            <a class="dropdown-item" href="#">Забыли пароль?</a>
                         <?php endif; ?>
                     </div>
         </div>

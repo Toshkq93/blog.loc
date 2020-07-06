@@ -20,6 +20,7 @@ $router->post('user/login', 'UserController@login');
 $router->get('user/signup', 'UserController@signup');
 $router->post('user/register', 'UserController@register');
 $router->get('user/logout', 'UserController@logout');
+$router->get('search', 'SearchController@index');
 
 $router->group('admin', function ($r) {
     if (!empty($_SESSION['user']['is_admin']) && preg_match('#/admin/?.*#', $_SERVER['REQUEST_URI'])) {

@@ -3,7 +3,6 @@
     <div class="container">
         <div class="breadcrumbs-main">
             <ol class="breadcrumb">
-                <li><a href="<?=PATH;?>">Главная</a></li>
                 <li>Поиск по запросу "<?=h($query);?>"</li>
             </ol>
         </div>
