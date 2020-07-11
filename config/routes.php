@@ -14,13 +14,22 @@ $router = new Router([
     ]
 ]);
 $router->get('','MainController@posts');
+
+$router->get('category/:string', 'CategoryController@view');
+
 $router->get('post/:id', 'PostController@post');
+
 $router->get('user/login', 'UserController@login');
 $router->post('user/login', 'UserController@login');
 $router->get('user/signup', 'UserController@signup');
 $router->post('user/register', 'UserController@register');
 $router->get('user/logout', 'UserController@logout');
-$router->get('search', 'SearchController@index');
+
+$router->get('/search', 'SearchController@index');
+
+$router->error(function (){
+    include WWW . '/errors/404.php';
+});
 
 $router->group('admin', function ($r) {
     if (!empty($_SESSION['user']['is_admin']) && preg_match('#/admin/?.*#', $_SERVER['REQUEST_URI'])) {
@@ -35,8 +44,8 @@ $router->group('admin', function ($r) {
             $r->get('post/delete/:id', 'admin\PostController@delete');
             $r->get('post/create/:id', 'admin\PostController@create');
             $r->post('post/store', 'admin\PostController@storePost');
-            $r->get('post/change&id=:id&status=1', 'admin\PostController@change');
-            $r->get('post/change&id=:id&status=0', 'admin\PostController@change');
+            $r->get('post/change', 'admin\PostController@change');
+            $r->get('post/change', 'admin\PostController@change');
 
             $r->get('users', 'admin\UserController@index');
             $r->get('user/delete/:id', 'admin\UserController@delete');

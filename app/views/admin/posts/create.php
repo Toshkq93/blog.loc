@@ -3,10 +3,10 @@
 <section class="content-header">
     <h1>Редактирование поста № <?= $post['id'];?>
         <?php if (!$post['publication']):?>
-            <a href="<?= ADMIN;?>/post/change&id=<?= $post['id'];?>&status=1" class="btn btn-success btn-xs">Опубликовать</a>
+            <a href="<?= ADMIN;?>/post/change?id=<?= $post['id'];?>&status=1" class="btn btn-success btn-xs">Опубликовать</a>
         <?php else: ?>
             <a href="" class="btn btn-default btn-xs">Опубликовано</a>
-            <a href="<?= ADMIN;?>/post/change&id=<?= $post['id'];?>&status=0" class="btn btn-danger btn-xs delete">Вернуть на доработку</a>
+            <a href="<?= ADMIN;?>/post/change?id=<?= $post['id'];?>&status=0" class="btn btn-danger btn-xs delete">Вернуть на доработку</a>
         <?php endif; ?>
     </h1>
     <ol class="breadcrumb">

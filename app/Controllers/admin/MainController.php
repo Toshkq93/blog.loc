@@ -2,7 +2,7 @@
 
 
 namespace app\Controllers\admin;
-use app\Models\admin\Main;
+use app\Models\Main;
 use core\View;
 
 class MainController extends AppController

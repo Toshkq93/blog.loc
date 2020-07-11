@@ -5,6 +5,7 @@ namespace app\Controllers;
 
 
 use app\Models\Main;
+use core\Pagination;
 use core\View;
 
 class MainController extends AppController
@@ -17,7 +18,9 @@ class MainController extends AppController
     }
 
     public function posts(){
+
         $posts = $this->main->getAllPosts();
+        View::setMeta('Главная');
         View::render('main', compact('posts'));
     }
 

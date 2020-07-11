@@ -27,5 +27,4 @@ class Post extends Model
         return true;
     }
 
-
 }

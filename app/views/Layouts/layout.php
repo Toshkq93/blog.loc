@@ -1,6 +1,13 @@
+<?php
+
+use app\Helper\MenuHelper;
+use core\View;
+
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
+    <?= View::getMeta();?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="/css/style.css" rel='stylesheet' type='text/css' />
@@ -17,7 +24,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <!--end slider -->
     <!--script-->
-    <script src="/js/typeahead.bundle.js"></script>
     <script type="text/javascript" src="/js/move-top.js"></script>
     <script type="text/javascript" src="/js/easing.js"></script>
     <script src="/megamenu-js-master/js/megamenu.js"></script>
@@ -43,11 +49,9 @@
         <!---start-top-nav---->
         <div class="top-menu">
             <nav class="navbar navbar-light bg-light">
-                <form class="form-inline search">
-                    <form action="<?= PATH;?>/search" method="post">
-                        <input type="search" placeholder="Поиск" class="form-control mr-sm-2" style="width: 140px;">
-                        <button><img src="/images/search.png" alt=""></button>
-                    </form>
+                <form class="form-inline search" method="get" action="/search">
+                    <input type="text" autocomplete="off" name="query" placeholder="Поиск" class="form-control mr-sm-2" style="width: 140px;">
+                     <button><img src="/images/search.png" alt=""></button>
                 </form>
                 <div class="btn-group">
                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,6 +60,9 @@
                     <div class="dropdown-menu">
                         <?php if (!empty($_SESSION['user'])): ?>
                             <li><a href="#">Добро пожаловать, <?= $_SESSION['user']['name'];?></a></li>
+                        <?php if ($_SESSION['user']['is_admin']): ?>
+                            <li><a href="<?= ADMIN;?>">Вход в админскую часть</a></li>
+                        <?php endif; ?>
                             <li><a href="<?= PATH;?>/user/logout">Выход</a></li>
                         <?php else: ?>
                             <a class="dropdown-item" href="<?= PATH?>/user/login">Вход</a>
@@ -67,17 +74,18 @@
             </nav>
             <div class="menu-container">
                 <div class="menu">
-                    <ul>
-                        <li><a href="<?= PATH;?>">Главная</a></li>
+                    <?php new MenuHelper(); ?>
+                    <!--<ul>
+                        <li><a href="<?/*= PATH;*/?>">Главная</a></li>
                         <li><a href="">Категории</a>
                             <ul>
                                 <li><a href="">PHP</a></li>
                                 <li><a href="">SQL</a></li>
                             </ul>
                         </li>
-                        <li><a href="<?= PATH;?>/contacts">Контакты</a>
+                        <li><a href="<?/*= PATH;*/?>/contacts">Контакты</a>
                         </li>
-                    </ul>
+                    </ul>-->
                 </div>
             </div>
         <!---//End-top-nav---->
@@ -103,7 +111,6 @@
                 </div>
             </div>
         </div>
-
         <?= $content;?>
     </div>
 </div>

@@ -6,6 +6,7 @@ define("WWW", ROOT . '/public');
 define("APP", ROOT . '/app');
 define("CORE", ROOT . '/core');
 define("CONF", ROOT . '/config');
+define("CACHE", ROOT . '/tmp/cache');
 define("LAYOUT", 'layout');
 
 // http://myblog.loc/index.php

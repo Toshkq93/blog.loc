@@ -14,10 +14,9 @@ function redirect($http = ''){
 }
 
 function removeHtml($arr){
-    for ($i = 0; $i <= count($arr); $i++){
-        $arr[$i] = htmlspecialchars($arr[$i]);
-        $arr[$i] = trim($arr[$i]);
-        $arr[$i] = strip_tags($arr[$i]);
+    $result = [];
+    foreach ($arr as $value){
+        $result[] = trim(htmlspecialchars(strip_tags($value)));
     }
-    return $arr;
+    return $result;
 }

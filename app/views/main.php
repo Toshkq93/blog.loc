@@ -13,6 +13,7 @@
             </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
+                <div class="clearfix"></div>
             <?php endif; ?>
         </div>
     </div>
