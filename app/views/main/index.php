@@ -1,3 +1,6 @@
+<div>
+    <h3>Последние добавленные посты:</h3>
+</div>
 <div class="content-grids">
     <div class="col-md-8 content-main">
         <div class="content-grid">

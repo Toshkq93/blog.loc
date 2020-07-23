@@ -7,7 +7,9 @@ use core\View;
 <!DOCTYPE HTML>
 <html>
 <head>
-    <?= View::getMeta();?>
+    <?php if (!empty($canonical)): ?>
+    <link rel="canonical" href="<?= $canonical;?>">
+    <?php endif; ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link href="/css/style.css" rel='stylesheet' type='text/css' />
@@ -59,10 +61,11 @@ use core\View;
                     </button>
                     <div class="dropdown-menu">
                         <?php if (!empty($_SESSION['user'])): ?>
-                            <li><a href="#">Добро пожаловать, <?= $_SESSION['user']['name'];?></a></li>
+                            <li><a href="<?= PATH;?>/user/kabinet">Добро пожаловать, <?= $_SESSION['user']['name'];?></a></li>
                         <?php if ($_SESSION['user']['is_admin']): ?>
                             <li><a href="<?= ADMIN;?>">Вход в админскую часть</a></li>
                         <?php endif; ?>
+                            <li><a href="<?= PATH;?>/user/cabinet">Личный кабинет</a></li>
                             <li><a href="<?= PATH;?>/user/logout">Выход</a></li>
                         <?php else: ?>
                             <a class="dropdown-item" href="<?= PATH?>/user/login">Вход</a>
@@ -75,17 +78,6 @@ use core\View;
             <div class="menu-container">
                 <div class="menu">
                     <?php new MenuHelper(); ?>
-                    <!--<ul>
-                        <li><a href="<?/*= PATH;*/?>">Главная</a></li>
-                        <li><a href="">Категории</a>
-                            <ul>
-                                <li><a href="">PHP</a></li>
-                                <li><a href="">SQL</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="<?/*= PATH;*/?>/contacts">Контакты</a>
-                        </li>
-                    </ul>-->
                 </div>
             </div>
         <!---//End-top-nav---->

@@ -1,7 +1,12 @@
+<?php
+
+use app\Helper\MenuHelper;
+
+?>
 <!-- Content Header (Page header) -->
 
 <section class="content-header">
-    <h1>Редактирование поста № <?= $post['id'];?>
+    <h1>Редактирование статьи № <?= $post['id'];?>
         <?php if (!$post['publication']):?>
             <a href="<?= ADMIN;?>/post/change?id=<?= $post['id'];?>&status=1" class="btn btn-success btn-xs">Опубликовать</a>
         <?php else: ?>
@@ -12,7 +17,7 @@
     <ol class="breadcrumb">
         <li><a href="<?=ADMIN;?>"><i class="fa fa-dashboard"></i> Главная</a></li>
         <li class="active"><a href="<?= ADMIN ?>/posts">Список постов</a></li>
-        <li class="active"></li>
+        <li class="active">Редактирование статьи № <?= $post['id'];?></li>
     </ol>
 </section>
 <!-- Main content -->
@@ -26,12 +31,12 @@
                             <table class="table table-bordered table-hover">
                                 <tbody>
                                 <tr>
-                                    <td>ID поста:</td>
+                                    <td>ID статьи:</td>
                                     <td><input type="text" name="id" id="" value="<?= $post['id']; ?>"></td>
                                 </tr>
                                 <tr>
-                                    <td>Название поста:</td>
-                                    <td><input type="text" name="title" style="width: 220px" value="<?= $post['title'];?>"></td>
+                                    <td>Название статьи:</td>
+                                    <td><input type="text" name="title" style="width: 220px" value="<?= $post['post_title'];?>"></td>
                                 </tr>
                                 <tr>
                                     <td>Описание:</td>
@@ -46,13 +51,21 @@
                                     <td><textarea name="text" id="" cols="30" rows="10"><?= $post['text'];?></textarea>
                                 </tr>
                                 <tr>
+                                    <td>Автор статьи:</td>
+                                    <td><?= $post['user_name'];?></td>
+                                </tr>
+                                <tr>
+                                    <td>Категория:</td>
+                                    <td><?= $post['category_title'];?></td>
+                                </tr>
+                                <tr>
                                     <td>Статус:</td>
                                     <td><?= $post['publication'] ? 'Опубликован' : 'Не опубликован';?></td>
                                 </tr>
                                 </tbody>
                             </table>
                             <input type="submit" class="btn btn-success" value="Сохранить">
-                            <input type="submit" class="btn btn-danger" name="cansel" value="Отмена">
+                            <a href="<?= ADMIN;?>/posts" class="btn btn-danger">Отмена</a>
                         </form>
                     </div>
                 </div>

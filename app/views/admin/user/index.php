@@ -39,7 +39,7 @@
                                     <td><?=$user['city'];?></td>
                                     <td><?=$user['email'];?></td>
                                     <td><?= $user['is_admin'] ? 'Админ':'Пользователь'; ?></td>
-                                    <td><a href="<?= ADMIN;?>/user/delete/<?= $user['id'];?>"><i class="fa fa-fw fa-close text-danger">Удалить</i></a></td>
+                                    <td><a href="<?= ADMIN;?>/user/delete/<?= $user['id'];?>"><i class="ion ion-close text-danger"></i></a></td>
                                     <td><a href="<?= ADMIN;?>/user/create/<?= $user['id'];?>"><i class="fa fa-fw fa-eye"></i></a></td>
                                 </tr>
                             <?php endforeach; ?>

@@ -4,24 +4,23 @@
 namespace app\Controllers;
 
 
-use app\Models\Search;
+use app\Models\Post;
 use core\Controller;
 use core\View;
 
 class SearchController extends Controller
 {
-    private $search;
+    private $post;
 
     public function __construct()
     {
-        $this->search = new Search();
+        $this->post = new Post();
     }
 
     public function index(){
-        $query = trim(htmlspecialchars(strip_tags($_GET['query'])));
-        $result = $this->search->search($query);
-        View::setMeta("Поиск по запросу {$query}");
-        View::render('search', compact('query', 'result'));
+        $query = removeHtmlStr($_GET['query']);
+        $result = $this->post->search($query);
+        View::render('search/index', ['query' => $query, 'result' => $result]);
     }
 
 }

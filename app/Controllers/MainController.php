@@ -3,25 +3,24 @@
 
 namespace app\Controllers;
 
-
-use app\Models\Main;
-use core\Pagination;
+use app\Models\Post;
+use core\Controller;
 use core\View;
 
-class MainController extends AppController
+class MainController extends Controller
 {
-    private $main;
+    private $posts;
 
     public function __construct()
     {
-        $this->main = new Main();
+        $this->posts = new Post();
     }
 
-    public function posts(){
-
-        $posts = $this->main->getAllPosts();
-        View::setMeta('Главная');
-        View::render('main', compact('posts'));
+    public function index()
+    {
+        $posts = $this->posts->getAllPostsMain();
+        $canonical = PATH;
+        View::render('main/index', ['posts' => $posts, 'canonical' => $canonical]);
     }
 
 }

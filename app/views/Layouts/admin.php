@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="/adminlte/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="/adminlte/plugins/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="/adminlte/my.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
@@ -260,6 +261,7 @@
 <script src="/adminlte/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="/adminlte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/js/validator.js"></script>
 <!-- AdminLTE App -->
 <script src="/adminlte/dist/js/adminlte.js"></script>
 </body>

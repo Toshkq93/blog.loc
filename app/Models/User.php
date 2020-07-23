@@ -15,37 +15,44 @@ class User extends Model
             ['password'],
             ['name'],
             ['email'],
-            ['city'],
-        ],
+            ['city'],],
         'email' => [
-            ['email'],
-        ],
+            ['email'],],
         'lengthMin' => [
-            ['password', 6],
-        ]
+            ['password', 6],]
     ];
 
-    public function getAllUsers(){
+    public function getAllUsers()
+    {
         return R::findAll('user');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
         return R::trash('user', $id);
     }
 
-    public function find($id){
+    public function find($id)
+    {
         return R::getRow("SELECT * FROM user WHERE id = ?", [$id]);
     }
 
-    public function getUser($login){
-//        return R::findOne('user', "login = ?", [$login]);
+    public function getUserName($id){
+        return R::getRow("SELECT name FROM user WHERE id = ?", [$id]);
+    }
+
+    public function getUser($login)
+    {
         return R::getRow("SELECT * FROM user WHERE login = ?", [$login]);
     }
 
-    public static function checkUnique($login, $email){
+    public static function checkUnique($login, $email)
+    {
         return R::findOne('user', 'login = ? OR email = ?', [$login, $email]);
     }
 
-
-
+    public function getCountUsers()
+    {
+        return R::count('user');
+    }
 }

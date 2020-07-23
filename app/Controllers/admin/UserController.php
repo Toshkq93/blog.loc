@@ -6,9 +6,10 @@ namespace app\Controllers\admin;
 
 use app\helper\AuthHelper;
 use app\Models\User;
+use core\Controller;
 use core\View;
 
-class UserController extends AppController
+class UserController extends Controller
 {
     private $user;
 
@@ -17,35 +18,35 @@ class UserController extends AppController
         $this->user = new User();
     }
 
-    public function index(){
+    public function index()
+    {
         $users = $this->user->getAllUsers();
-        View::render('admin/user/index', compact('users'));
+        View::render('admin/user/index', ['users' => $users]);
     }
 
-    public function delete($id){
-        if ($this->user->delete($id)){
+    public function delete($id)
+    {
+        if ($this->user->delete($id)) {
             $_SESSION['success'] = 'Пользователь успешно удален';
             redirect();
         }
     }
 
-    public function create($id){
-        $user = $this->user->find($id);
-        View::render('admin/user/create', compact('user'));
+    public function create($id)
+    {
+        View::render('admin/user/create', ['user' => $this->user->find($id)]);
     }
 
-    public function save(){
-        if (isset($_POST['cansel'])){
-            redirect(ADMIN . '/users');
-        }
-        $data = $_POST;
-        if($data['is_admin'] == 'Админ'){
+    public function save()
+    {
+        $data = removeHtml($_POST);
+        if ($data['is_admin'] == 'Админ') {
             $data['is_admin'] = 1;
-        }else{
+        } else {
             $data['is_admin'] = 0;
         }
-        if (AuthHelper::validate($data, $this->user->rules)){
-            $this->user->store($data, 'user');
+
+        if ($this->user->store($data, 'user')) {
             $_SESSION['success'] = 'Пользователь успешно изменен!';
             redirect(ADMIN . '/users');
         }

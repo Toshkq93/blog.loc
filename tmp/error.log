@@ -34,3 +34,133 @@
  =======================
 [2020-07-11 19:29:58] Text error: Identifier does not conform to RedBeanPHP security policies. | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\QueryWriter\AQueryWriter.php | Line: 820
  =======================
+[2020-07-12 00:08:35] Text error: Call to undefined method app\Models\Main::getCountPosts() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\MainController.php | Line: 20
+ =======================
+[2020-07-12 00:08:49] Text error: Call to undefined method app\Models\Main::getCountPosts() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\MainController.php | Line: 20
+ =======================
+[2020-07-14 14:07:24] Text error: Too few arguments to function app\Controllers\admin\CategoryController::delete(), 0 passed and exactly 1 expected | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\CategoryController.php | Line: 15
+ =======================
+[2020-07-14 20:33:20] Text error: Class 'app\Models\Main' not found | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\MainController.php | Line: 17
+ =======================
+[2020-07-14 20:36:01] Text error: Class 'app\Models\Main' not found | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\MainController.php | Line: 17
+ =======================
+[2020-07-14 20:38:52] Text error: Call to undefined method core\View::getMeta() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\Layouts\layout.php | Line: 10
+ =======================
+[2020-07-14 20:38:53] Text error: Call to undefined method core\View::getMeta() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\Layouts\layout.php | Line: 10
+ =======================
+[2020-07-14 20:55:47] Text error: Call to undefined method core\View::getMeta() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\Layouts\layout.php | Line: 10
+ =======================
+[2020-07-14 23:12:57] Text error: Too few arguments to function app\Models\Post::getAllPosts(), 0 passed in F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\PostController.php on line 63 and exactly 2 expected | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Models\Post.php | Line: 22
+ =======================
+[2020-07-15 12:47:27] Text error: syntax error, unexpected 'public' (T_PUBLIC), expecting end of file | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\SearchController.php | Line: 28
+ =======================
+[2020-07-15 12:48:14] Text error: SQLSTATE[HY000]: General error: 1364 Field 'category_id' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 12:48:21] Text error: SQLSTATE[HY000]: General error: 1364 Field 'category_id' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 15:16:34] Text error: SQLSTATE[HY000]: General error: 1364 Field 'password' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 15:16:47] Text error: SQLSTATE[HY000]: General error: 1364 Field 'password' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 15:17:09] Text error: SQLSTATE[HY000]: General error: 1364 Field 'password' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 15:18:30] Text error: SQLSTATE[HY000]: General error: 1364 Field 'password' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 15:30:09] Text error: SQLSTATE[HY000]: General error: 1364 Field 'password' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 15:36:54] Text error: SQLSTATE[HY000]: General error: 1364 Field 'password' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 15:59:09] Text error: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'password' cannot be null | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 18:06:00] Text error: Too few arguments to function RedBeanPHP\Facade::load(), 1 passed in F:\OpenServer\OSPanel\domains\blog.loc\core\Model.php on line 29 and at least 2 expected | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Facade.php | Line: 747
+ =======================
+[2020-07-15 18:07:02] Text error: Too few arguments to function RedBeanPHP\Facade::load(), 1 passed in F:\OpenServer\OSPanel\domains\blog.loc\core\Model.php on line 29 and at least 2 expected | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Facade.php | Line: 747
+ =======================
+[2020-07-15 18:16:50] Text error: Bean has incomplete Meta Information id  | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Repository.php | Line: 352
+ =======================
+[2020-07-15 23:04:05] Text error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-15 23:21:28] Text error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-16 15:28:04] Text error: SQLSTATE[HY000]: General error: 1364 Field 'category_id' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-16 22:36:39] Text error: Class 'ishop\App' not found | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\menu\select.php | Line: 5
+ =======================
+[2020-07-16 22:36:40] Text error: Class 'ishop\App' not found | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\menu\select.php | Line: 5
+ =======================
+[2020-07-16 23:09:22] Text error: SQLSTATE[HY000]: General error: 1364 Field 'alias' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-16 23:19:11] Text error: syntax error, unexpected 'if' (T_IF) | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\CategoryController.php | Line: 56
+ =======================
+[2020-07-17 12:29:01] Text error: syntax error, unexpected '}', expecting ';' | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Models\Category.php | Line: 22
+ =======================
+[2020-07-17 12:29:03] Text error: syntax error, unexpected '}', expecting ';' | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Models\Category.php | Line: 22
+ =======================
+[2020-07-17 12:29:05] Text error: syntax error, unexpected '}', expecting ';' | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Models\Category.php | Line: 22
+ =======================
+[2020-07-17 12:29:06] Text error: syntax error, unexpected '}', expecting ';' | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Models\Category.php | Line: 22
+ =======================
+[2020-07-17 12:31:34] Text error: syntax error, unexpected ']' | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\CategoryController.php | Line: 66
+ =======================
+[2020-07-17 12:37:44] Text error: Call to undefined method app\Models\Category::getCatId() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\CategoryController.php | Line: 64
+ =======================
+[2020-07-17 12:39:42] Text error: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-17 12:53:47] Text error: Call to undefined function h() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\admin\category\edit.php | Line: 26
+ =======================
+[2020-07-17 12:53:57] Text error: Call to undefined function h() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\admin\category\edit.php | Line: 26
+ =======================
+[2020-07-17 12:53:58] Text error: Call to undefined function h() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\admin\category\edit.php | Line: 26
+ =======================
+[2020-07-17 12:54:50] Text error: Call to undefined function h() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\admin\category\edit.php | Line: 27
+ =======================
+[2020-07-17 12:55:46] Text error: Call to undefined function h() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\admin\category\edit.php | Line: 27
+ =======================
+[2020-07-17 13:25:46] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '= LIMIT 1   -- keep-cache' at line 1 | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-17 13:27:16] Text error: syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting end of file | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\admin\category\edit.php | Line: 64
+ =======================
+[2020-07-17 13:36:33] Text error: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE publication = 1  -- keep-cache' at line 1 | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-18 13:22:13] Text error: syntax error, unexpected 'View' (T_STRING) | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\PostController.php | Line: 39
+ =======================
+[2020-07-18 19:36:58] Text error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-18 19:37:00] Text error: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in where clause is ambiguous | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-18 19:45:03] Text error: SQLSTATE[42000]: Syntax error or access violation: 1248 Every derived table must have its own alias | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-18 19:45:27] Text error: SQLSTATE[42000]: Syntax error or access violation: 1248 Every derived table must have its own alias | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-18 19:45:28] Text error: SQLSTATE[42000]: Syntax error or access violation: 1248 Every derived table must have its own alias | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-18 19:45:29] Text error: SQLSTATE[42000]: Syntax error or access violation: 1248 Every derived table must have its own alias | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-18 19:45:29] Text error: SQLSTATE[42000]: Syntax error or access violation: 1248 Every derived table must have its own alias | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-18 19:45:29] Text error: SQLSTATE[42000]: Syntax error or access violation: 1248 Every derived table must have its own alias | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 194
+ =======================
+[2020-07-19 11:41:38] Text error: No connection with Data Base! | File: F:\OpenServer\OSPanel\domains\blog.loc\core\Db.php | Line: 14
+ =======================
+[2020-07-19 19:07:44] Text error: Too few arguments to function app\Controllers\CommentController::save(), 0 passed and exactly 1 expected | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\CommentController.php | Line: 19
+ =======================
+[2020-07-19 20:28:50] Text error: Too few arguments to function app\Controllers\PostController::post(), 0 passed and exactly 1 expected | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\PostController.php | Line: 21
+ =======================
+[2020-07-19 20:29:16] Text error: Too few arguments to function app\Controllers\PostController::post(), 0 passed and exactly 1 expected | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\PostController.php | Line: 21
+ =======================
+[2020-07-19 20:29:18] Text error: Too few arguments to function app\Controllers\PostController::post(), 0 passed and exactly 1 expected | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\PostController.php | Line: 21
+ =======================
+[2020-07-21 17:10:43] Text error: syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\contact\index.php | Line: 41
+ =======================
+[2020-07-21 17:10:53] Text error: syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) | File: F:\OpenServer\OSPanel\domains\blog.loc\app\views\contact\index.php | Line: 42
+ =======================
+[2020-07-23 12:09:49] Text error: Failed to authenticate on SMTP server with username "a.stanovoi170993@gmail.com" using 2 possible authenticators | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php | Line: 181
+ =======================
+[2020-07-23 12:12:27] Text error: Failed to authenticate on SMTP server with username "a.stanovoi170993@gmail.com" using 2 possible authenticators | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php | Line: 181
+ =======================
+[2020-07-23 12:33:44] Text error: Failed to authenticate on SMTP server with username "a.stanovoi170993@gmail.com" using 2 possible authenticators | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php | Line: 181
+ =======================
+[2020-07-23 13:14:22] Text error: Call to undefined function app\Controllers\admin\str() | File: F:\OpenServer\OSPanel\domains\blog.loc\app\Controllers\admin\MessageController.php | Line: 39
+ =======================
+[2020-07-23 13:20:46] Text error: SQLSTATE[HY000]: General error: 1364 Field 'user_name' doesn't have a default value | File: F:\OpenServer\OSPanel\domains\blog.loc\vendor\gabordemooij\redbean\RedBeanPHP\Driver\RPDO.php | Line: 199
+ =======================

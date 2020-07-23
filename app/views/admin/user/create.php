@@ -44,7 +44,7 @@
                             </tbody>
                         </table>
                         <input type="submit" class="btn btn-success" value="Сохранить">
-                        <input type="submit" class="btn btn-danger" name="cansel" value="Отмена">
+                        <a href="<?= ADMIN;?>/users" class="btn btn-danger">Отмена</a>
                     </form>
                     </div>
                 </div>

@@ -3,32 +3,37 @@
         <div class="col-md-8 single-main">
             <?php if (isset($post)): ?>
             <div class="post-info">
-                <h4><a href="" style="color: red"><?= $post['title'];?><a/><?= $post['created_at'];?></h4>
+
+                <h4><a href="" style ="color: red"><?= $post['post_title'];?><a/><?= $post['created_at'];?></h4>
+                Автор:<a href="#" rel="author"><?= $post['name'];?></a>
+                <br>Город: <a href="#" rel="author"><?= $post['city'];?></a>
+                <br>Email: <a href="#" rel="author"><?= $post['email'];?></a>
                 <p><?= $post['text'];?></p>
             </div>
             <?php endif;?>
+            <h3>Коментарии:</h3>
+                <?php foreach ($comments as $comment): ?>
             <ul class="comment-list">
-                <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
-                <li><img src="images/avatar.png" class="img-responsive" alt="">
-                    <div class="desc">
-                        <p>View all posts by: <a href="#" title="Posts by admin" rel="author">admin</a></p>
-                    </div>
-                    <div class="clearfix"></div>
-                </li>
+                    <h5 class="post-author_head"><a href="#" rel="author"><?= $comment['name'];?></a></h5>
+                    <h5 class="post-author_head"><?= $comment['date_create'];?></h5>
+                    <h5 class="post-author_head"><a href="#" rel="author"><?= $comment['content'];?></a></h5>
             </ul>
+                <?php endforeach; ?>
+            <br><br>
             <div class="content-form">
-                <h3>Leave a comment</h3>
-                <form>
-                    <input type="text" placeholder="Name" required/>
-                    <input type="text" placeholder="Email" required/>
-                    <input type="text" placeholder="Phone" required/>
-                    <textarea placeholder="Message"></textarea>
-                    <input type="submit" value="SEND"/>
+                <?php if (isset($_SESSION['user'])): ?>
+                <h3>Оставить коментарит: </h3>
+                <form action="/comment" method="post">
+                    <textarea placeholder="Кометарии" name="content"></textarea>
+                    <input type="hidden" name="post_id" value="<?= $post['id'];?>">
+                    <input type="submit" value="Отправить"/>
                 </form>
             </div>
+            <?php else: ?>
+                <h3 style="text-align: center">Войдите чтобы оставить коментарий</h3>
+            <?php endif; ?>
         </div>
-
-        <div class="col-md-4 side-content">
+        <!--<div class="col-md-4 side-content">
             <div class="recent">
                 <h3>RECENT POSTS</h3>
                 <ul>
@@ -67,6 +72,6 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="clearfix"></div>
+        <div class="clearfix"></div>-->
     </div>
 </div>

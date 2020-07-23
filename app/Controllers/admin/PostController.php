@@ -17,35 +17,35 @@ class PostController extends Controller
         $this->post = new Post();
     }
 
-    public function delete($id){
-        if ($this->post->delete($id)){
+    public function delete($id)
+    {
+        if ($this->post->delete($id)) {
             $_SESSION['success'] = 'Пост успешно удален!';
             redirect();
         }
     }
 
-    public function create($id){
-        $post = $this->post->getPost($id);
-        View::render('admin/posts/create', compact('post'));
+    public function create($id)
+    {
+        View::render('admin/posts/create', ['post' => $this->post->getPostAdmin($id)]);
     }
 
-    public function storePost(){
-        if (isset($_POST['cansel'])){
-            redirect(ADMIN . '/posts');
-        }
+    public function store()
+    {
         $data = $_POST;
-        if ($this->post->store($data, 'post')){
+        if ($this->post->store($data, 'post')) {
             $_SESSION['success'] = 'Пост успешно изменен!';
             redirect(ADMIN . '/posts');
         }
     }
 
-    public function change(){
-        $data = $_GET;
-        if ($this->post->updatePost($data['id'], $data['status'])){
+    public function change()
+    {
+        $data = removeHtml($_GET);
+        if ($this->post->updatePost($data['id'], $data['status'])) {
             if ($data['status']) {
                 $_SESSION['success'] = 'Пост успешно опубликован!';
-            }else{
+            } else {
                 $_SESSION['error'] = 'Пост отправлен на доработку!';
             }
             redirect();
@@ -53,12 +53,15 @@ class PostController extends Controller
 
     }
 
-    public function add(){
+    public function add()
+    {
         View::render('admin/posts/add');
     }
 
-    public function index(){
-        $posts = $this->post->getAllPosts();
-        View::render('admin/posts/index', compact('posts'));
+    public function index()
+    {
+        $postsPub = $this->post->getAllPostsAdmin();
+        $postNotPub = $this->post->getAllPostsNP();
+        View::render('admin/posts/index', ['posts' => $postsPub, 'postsNP' => $postNotPub]);
     }
 }

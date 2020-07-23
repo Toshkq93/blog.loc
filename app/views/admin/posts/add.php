@@ -1,3 +1,8 @@
+<?php
+
+use app\Helper\MenuHelper;
+
+?>
 <section class="content">
     <div class="row">
         <div class="col-md-12">
@@ -19,10 +24,26 @@
                                     <td>Контент:</td>
                                     <td><textarea name="text" id="" cols="30" rows="10"></textarea>
                                 </tr>
+                                <tr>
+                                    <td>Категория:</td>
+                                    <td>
+                                        <?php new MenuHelper([
+                                            'tpl' => APP . '/views/menu/select.php',
+                                            'container' => 'select',
+                                            'cache' => 0,
+                                            'cacheKey' => 'user_select',
+                                            'class' => 'form-control',
+                                            'attrs' => [
+                                                'name' => 'category_id',
+                                                'id' => 'category_id',
+                                            ]
+                                        ])?>
+                                    </td>
+                                </tr>
                                 </tbody>
                             </table>
                             <input type="submit" class="btn btn-success" value="Сохранить">
-                            <input type="submit" class="btn btn-danger" name="cansel" value="Отмена">
+                            <a href="<?= ADMIN;?>/posts" class="btn btn-danger">Отмена</a>
                         </form>
                     </div>
                 </div>

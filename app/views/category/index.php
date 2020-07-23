@@ -6,7 +6,7 @@
                     <?php if ($post['publication']): ?>
                         <div class="content-grid-info">
                             <div class="post-info">
-                                <h4><a href="post/<?= $post['id'];?>"><?= $post['title'];?></a><?= $post['created_at'];?></h4>
+                                <h4><a href="<?= PATH;?>/post/<?= $post['id'];?>"><?= $post['title'];?></a><?= $post['created_at'];?></h4>
                                 <p><?=$post['description'] ;?></p>
                                 <a href="<?= PATH;?>/post/<?= $post['id'];?>"><span></span>READ MORE</a>
                             </div>
