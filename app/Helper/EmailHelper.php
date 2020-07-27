@@ -10,13 +10,13 @@ use Swift_SmtpTransport;
 
 abstract class EmailHelper
 {
-    public static $settings = [
+    private static $settings = [
         'site_name' => 'blog.loc',
         'smtp_host' => 'smtp.gmail.com',
         'smtp_port' => '465',
         'smtp_protocol' => 'ssl',
-        'smtp_login' => 'a.stanovoi170993@gmail.com',
-        'smtp_password' => 'electrohouse93',
+        'smtp_login' => 'programmingtest1993@gmail.com',
+        'smtp_password' => 'newPasswordforsite',
         ];
 
 
