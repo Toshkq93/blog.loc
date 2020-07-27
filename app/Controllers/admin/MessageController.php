@@ -37,7 +37,7 @@ class MessageController extends Controller
     {
         $data = removeHtml($_POST);
         $_SESSION['message'] = implode($data);
-        if (EmailHelper::SendMail()) {
+        if (EmailHelper::SendMail('admin/message/mail')) {
             $_SESSION['user_message']['answed'] = 1;
             if ($this->message->update($_SESSION['user_message'], 'message', $_SESSION['user_message']['id'])) {
                 unset($_SESSION['message']);

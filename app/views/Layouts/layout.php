@@ -70,7 +70,7 @@ use core\View;
                         <?php else: ?>
                             <a class="dropdown-item" href="<?= PATH?>/user/login">Вход</a>
                             <a class="dropdown-item" href="<?= PATH?>/user/signup">Регистрация</a>
-                            <a class="dropdown-item" href="#">Забыли пароль?</a>
+                            <a class="dropdown-item" href="/user/forgetpassword">Забыли пароль?</a>
                         <?php endif; ?>
                     </div>
         </div>

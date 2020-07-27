@@ -55,4 +55,9 @@ class User extends Model
     {
         return R::count('user');
     }
+
+    public function checkEmail($email){
+        return R::getRow("SELECT * FROM user WHERE email = ?", [$email]);
+
+    }
 }

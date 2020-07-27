@@ -4,6 +4,7 @@
 namespace app\Controllers;
 
 
+use app\Helper\EmailHelper;
 use app\Models\User;
 use core\Controller;
 use core\View;
@@ -25,8 +26,7 @@ class UserController extends Controller
 
     public function register()
     {
-        $data = $_POST;
-        removeHtml($data);
+        $data = removeHtml($_POST);
         if (!AuthHelper::validate($data, $this->user->rules)) {
             AuthHelper::getErrors();
             redirect();
@@ -85,8 +85,6 @@ class UserController extends Controller
     public function edit()
     {
         View::render('user/editUser');
-
-
     }
 
     public function store()
@@ -100,6 +98,58 @@ class UserController extends Controller
             unset($data['password']);
             $_SESSION['user'] = $data;
             redirect(PATH . '/user/cabinet');
+        }
+    }
+
+    public function forgetPassword()
+    {
+        View::render('user/forgetpas');
+    }
+
+    public function sendMessage()
+    {
+        $email = removeHtml($_POST);
+        extract($email);
+        $user = $this->user->checkEmail($email);
+        if (!empty($user)) {
+            unset($user['password']);
+            $_SESSION['user_message'] = $user;
+            $_SESSION['message'] = randomNumStr();
+            EmailHelper::SendMail('user/messageForgetPass');
+            View::render('user/formCheck');
+        } else {
+            $_SESSION['error'] = 'Вы ввели неправильный email адресс. Такого пользователя не существует.';
+            redirect();
+        }
+
+    }
+
+    public function checkCode()
+    {
+        $code = removeHtml($_POST);
+        extract($code);
+        if ($code === $_SESSION['message']) {
+            View::render('user/changePassword');
+            unset($_SESSION['message']);
+        } else {
+            $_SESSION['error'] = 'Ошибка! Вы ввели неверный код.';
+            redirect();
+        }
+    }
+
+    public function changePassword()
+    {
+        $passwords = removeHtml($_POST);
+        if ($passwords['password'] == $passwords['repeat_password']) {
+            $_SESSION['user_message']['password'] = password_hash($passwords['password'], PASSWORD_DEFAULT);
+            if ($this->user->update($_SESSION['user_message'], 'user', $_SESSION['user_message']['id'])) {
+                $_SESSION['success'] = 'Вы успешно изменили ваш пароль.';
+                unset($_SESSION['user_message']);
+                redirect(PATH);
+            }
+        } else {
+            $_SESSION['error'] = 'Ошибка! Пароли не совпадают!';
+            redirect();
         }
     }
 }

@@ -29,6 +29,10 @@ $router->get('user/logout', 'UserController@logout');
 $router->get('user/cabinet', 'UserController@cabinet');
 $router->get('user/edit', 'UserController@edit');
 $router->post('user/store', 'UserController@store');
+$router->get('user/forgetpassword', 'UserController@forgetpassword');
+$router->post('user/sendMess', 'UserController@sendMessage');
+$router->post('user/checkcode', 'UserController@checkCode');
+$router->post('user/changePassword', 'UserController@changePassword');
 
 $router->get('search', 'SearchController@index');
 

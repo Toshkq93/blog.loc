@@ -32,9 +32,9 @@
                             <?php foreach($messages_new as $message): ?>
                                 <tr>
                                     <td><?=$message['id'];?></td>
-                                    <td><?=$message['user_name'];?></td>
-                                    <td><?=$message['user_email'];?></td>
-                                    <td><?=$message['user_city'];?></td>
+                                    <td><?=$message['name'];?></td>
+                                    <td><?=$message['email'];?></td>
+                                    <td><?=$message['city'];?></td>
                                     <td><?=$message['message_content'];?></td>
                             <td><a href="<?= ADMIN;?>/answed?id=<?= $message['id'];?>" class="btn btn-default">Ответить</a></td>
                                 </tr>
@@ -55,16 +55,18 @@
             <th>Email отправителя</th>
             <th>Город</th>
             <th>Сообщение</th>
+            <th>Посмотреть сообщение</th>
         </tr>
         </thead>
         <tbody>
         <?php foreach($messages_old as $messageOld): ?>
             <tr>
                 <td><?=$messageOld['id'];?></td>
-                <td><?=$messageOld['user_name'];?></td>
-                <td><?=$messageOld['user_email'];?></td>
-                <td><?=$messageOld['user_city'];?></td>
+                <td><?=$messageOld['name'];?></td>
+                <td><?=$messageOld['email'];?></td>
+                <td><?=$messageOld['city'];?></td>
                 <td><?=$messageOld['message_content'];?></td>
+                <td><a href=""><i class="fa fa-fw fa-eye"></i></a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

@@ -30,3 +30,9 @@ function removeHtmlStr($str)
 {
     return trim(htmlspecialchars(strip_tags($str)));
 }
+
+function randomNumStr()
+{
+    $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyz';
+    return substr(str_shuffle($permitted_chars), 0, 6);
+}
